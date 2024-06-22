@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moedas</title>
+    <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon">
+
+    <!-- CSS -->
+     <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="container">    
+      <div class="main">
+        <div class="title-main">
+          <h3>Conversor de Moedas</h3>          
+        </div>
+        
+        <div class="body-main">
+          <div class="group">
+            <label for="initial-value">Valor</label>
+            <input type="number" name="initial-value" id="initial-value" placeholder="0,00" onkeyup="convert()">
+          </div>
+
+          <div class="group">
+            <label for="convert-from">Converter de </label>
+            <select name="convert-from" id="convert-from" onchange="convert()">
+              <option value="BRL">BRL - Real</option>
+              <option value="USD">USD - Dólar</option>
+              <option value="EUR">EUR - Euro</option>
+            </select>
+          </div>
+
+          <div class="group">
+            <label for="convert-to">Para</label>
+            <select name="convert-to" id="convert-to" onchange="convert()">
+              <option value="BRL">BRL - Real</option>
+              <option value="USD">USD - Dólar</option>
+              <option value="EUR">EUR - Euro</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="group">
+          <label for="converted-coin">Valor convertido</label>
+          <input type="text" name="converted-coin" id="converted-coin" disabled>
+          <small>Atualizado no 22/06/2024, 13:47</small>
+        </div>
+      </div>
+    </div>    
+
+    <script src="script.js"></script>
+  </body>
+</html>
